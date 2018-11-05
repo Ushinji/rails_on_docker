@@ -1,51 +1,24 @@
-# 開発環境
+# README
 
-## 必要環境
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-* Git
-* Docker
+Things you may want to cover:
 
-## リポジトリのクローン
+* Ruby version
 
-```
-$ git clone git@github.com:Ushinji/rails_on_docker.git
-$ cd path/to/repo
-```
+* System dependencies
 
+* Configuration
 
-## 起動手順
+* Database creation
 
-イメージのビルド
+* Database initialization
 
-```
-docker-compose 
-```
+* How to run the test suite
 
-Gemインストール
+* Services (job queues, cache servers, search engines, etc.)
 
-```
-docker-compose exec --rm app bundle install
-```
+* Deployment instructions
 
-database.ymlのコピー
-
-```
-docker-compose run --rm app cp template/database.yml config/database.yml
-```
-
-DBマイグレーション
-
-```
-docker-compose exec --rm app bundle exec rails db:create
-
-docker-compose exec --rm app bundle exec rails db:migrate
-```
-
-コンテナー起動
-
-```
-docker-compose up -d
-```
-
-http://localhost:3000 にアクセスして、アプリが表示されることを確認。
-
+* ...
